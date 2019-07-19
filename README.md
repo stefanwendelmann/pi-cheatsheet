@@ -8,7 +8,7 @@ Download: https://www.raspberrypi.org/downloads/raspbian/
 
 Write to SD Card with Win32 Disk Imager or Etcher 
 
-#### Preset WLAN Setup
+#### Preset Headless WLAN Setup
 
 After write to SD Card, write a file named wpa_supplicant.conf to the boot partition
 
@@ -27,6 +27,41 @@ network={
 
 Replace SSID with your SSID and PASSWORD with your plain WLAN Password
 
-#### Preset Enable SSH
+#### Preset Headless Enable SSH
 
 After we´rite to SD Card, write an empty File named ssh inside the boot partition
+
+# Headless SSH Setup
+
+## Change Password ! & Hostname
+
+Default Hostname: raspberrypi
+Default User: pi
+Default Password: raspberry
+
+Connect with the Headless pi
+
+```bash
+ssh pi@raspberrypi
+y
+raspberry
+```
+
+Change Password
+
+```bash
+passwd pi
+```
+
+Change Hostname & Shared Memory
+
+Shared Memory can be reduced to min. on Headless Pi
+
+```bash
+sudo raspi-config
+2. Network Options
+Hostname
+7. Advanced Options
+A3 Memory Split
+Finish & Reboot
+```
