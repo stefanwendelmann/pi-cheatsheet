@@ -10,7 +10,7 @@ Write to SD Card with Win32 Disk Imager or Etcher
 
 #### Preset WLAN Setup
 
-After Write to SD Card, Write a file named wpa_supplicant.conf to the boot partition
+After write to SD Card, write a file named wpa_supplicant.conf to the boot partition
 
 ```plain
     
@@ -26,3 +26,7 @@ network={
 ```
 
 Replace SSID with your SSID and PASSWORD with your plain WLAN Password
+
+#### Preset Enable SSH
+
+After we´rite to SD Card, write an empty File named ssh inside the boot partition
