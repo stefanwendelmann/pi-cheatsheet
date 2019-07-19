@@ -33,7 +33,7 @@ After we´rite to SD Card, write an empty File named ssh inside the boot partiti
 
 # Headless SSH Setup
 
-## Change Password ! & Hostname
+## Change Password ! & Hostname & Memory Split
 
 Default Hostname: raspberrypi
 Default User: pi
@@ -64,4 +64,18 @@ Hostname
 7. Advanced Options
 A3 Memory Split
 Finish & Reboot
+```
+
+## SSH Login via SSH-Key
+
+On Local Machine if not done earlier, generate key
+
+```bash
+ssh-kegen
+```
+
+Copy the Key to te Pi 
+
+```bash
+ssh-copy-id pi@raspberrypi
 ```
