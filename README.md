@@ -79,3 +79,17 @@ Copy the Key to te Pi
 ```bash
 ssh-copy-id pi@raspberrypi
 ```
+
+## Update 
+
+```bash
+sudo apt update && sudo apt full-upgrade
+```
+
+## RPi4 Boot from SSD
+
+Set to stable release:
+```bash
+sudo nano /etc/default/rpi-eeprom-update
+```
+
