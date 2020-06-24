@@ -118,6 +118,19 @@ sudo dd if=/dev/mmcblk0 of=/dev/sda
 ```
 Depending on the SD Card size, it should take a while
 
+```bash
+sudo shutdown -h now
+```
+wait a bit till its off (green light stops blinking) and unplug the power, then unplug the SD Card and plug the power in again
+
+You are now running on SSD only
+
+Extend the filesystem with the raspi-config under Advanced options
+
+```bash
+sudo raspi-config
+```
+
 Benchmark SSD Performance
 
 https://jamesachambers.com/raspberry-pi-storage-benchmarks-2019-benchmarking-script/
