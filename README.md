@@ -93,3 +93,14 @@ Set to stable release:
 sudo nano /etc/default/rpi-eeprom-update
 ```
 
+Check the Version of the pieeprom*.bin File
+
+```bash 
+ls /lib/firmware/raspberrypi/bootloader/stable/
+```
+
+Update to the newest bootloader Version
+
+```bash 
+sudo rpi-eeprom-update -d -f /lib/firmware/raspberrypi/bootloader/stable/pieeprom-<Version>.bin
+```
