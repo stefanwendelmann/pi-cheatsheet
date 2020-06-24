@@ -104,3 +104,24 @@ Update to the newest bootloader Version
 ```bash 
 sudo rpi-eeprom-update -d -f /lib/firmware/raspberrypi/bootloader/stable/pieeprom-<Version>.bin
 ```
+
+Check out the Disk KNAME by the SIZE and TYPE with
+
+```bash
+lsblk -o KNAME,TYPE,SIZE,MODEL
+```
+
+Copy everything from SD Card to the SSD Drive
+
+```bash
+sudo dd if=/dev/mmcblk0 of=/dev/sda
+```
+Depending on the SD Card size, it should take a while
+
+Benchmark SSD Performance
+
+https://jamesachambers.com/raspberry-pi-storage-benchmarks-2019-benchmarking-script/
+
+```bash
+sudo curl https://raw.githubusercontent.com/TheRemote/PiBenchmarks/master/Storage.sh | sudo bash
+```
