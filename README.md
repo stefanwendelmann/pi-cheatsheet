@@ -184,6 +184,9 @@ sudo stressberry-plot out1.dat out2.dat out3.dat
 
 ## Overclock CPU & GPU
 
+See https://www.raspberrypi.org/documentation/configuration/config-txt/overclocking.md
+
+
 ```bash
 sudo apt-get update && sudo apt-get -y upgrade
 sudo rpi-update
@@ -208,6 +211,10 @@ gpu_freq=750
 ##### Stresstest compared to stock mode
 
 ![OC-6-2147-750-to-normal](/benchmark/stressberry/oc-6-2147-750-to-normal.png)
+
+30 Minute Test 
+
+![OC-6-2147-750-30m](/benchmark/stressberry/oc-6-2147-750-30m.png)
 
 #### Pi 4 - 8GB Model
 
