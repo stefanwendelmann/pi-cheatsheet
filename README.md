@@ -149,12 +149,60 @@ Install for Pi OS Light Image:
 sudo apt install stress
 sudo apt-get install libatlas-base-dev
 sudo pip3 install stressberry
-stressberry-run out.dat
-stressberry-plot out.dat -o out.png
+sudo stressberry-run out.dat
+sudo stressberry-plot out.dat -o out.png
 ```
+
+More Params:
+
+* -n Test name for plotting
+* -i in sec idle periods befor and after
+* -d in sec stress time
+* -c number of cores
+
+### Plot multiple Tests into one Chart
+
+If you dont param the name when `sudo stressberry-run` with the `-n <name>` param, then you need to  edit the name attribute in the dat file `sudo nano out.dat`.
+
+```bash
+sudo stressberry-plot out1.dat out2.dat out3.dat
+```
+
+### Pi 4 - 4GB Model with case & active cooling always on + heatsinks 
+
+![Normal](/benchmark/stressberry/normal.png)
 
 ## Overclock CPU & GPU
 
-Pi 4 - 4GB Model
+```bash
+sudo apt-get update && sudo apt-get -y upgrade
+sudo rpi-update
+sudo reboot
+sudo nano /boot/config.txt
+```
 
+### Settings
 
+Append following lines for the fitting Pi to the config.txt and `sudo reboot`.
+
+If it bricks, attach the drive to the PC and remove the lines.
+
+#### Pi 4 - 4GB Model
+
+```bash
+over_voltage=6
+arm_freq=2147
+gpu_freq=750
+```
+
+##### Stresstest compared to stock mode
+
+![OC-6-2147-750-to-normal](/benchmark/stressberry/oc-6-2147-750-to-normal.png)
+
+#### Pi 4 - 8GB Model
+
+```bash
+over_voltage=8
+arm_freq=2147
+gpu_freq=750
+```
