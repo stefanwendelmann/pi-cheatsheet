@@ -153,12 +153,20 @@ sudo stressberry-run out.dat
 sudo stressberry-plot out.dat -o out.png
 ```
 
-More Params:
+More stressberry-run Params:
 
 * -n Test name for plotting
 * -i in sec idle periods befor and after
 * -d in sec stress time
 * -c number of cores
+
+More stressberry-plot Params:
+
+* -f Plot CPU frequency
+* -l frequency min/max limits seperated by space
+* --hide-legend
+* --not-transparent
+* -line-width
 
 ### Plot multiple Tests into one Chart
 
@@ -169,6 +177,8 @@ sudo stressberry-plot out1.dat out2.dat out3.dat
 ```
 
 ### Pi 4 - 4GB Model with case & active cooling always on + heatsinks 
+
+![setup-4-fan-enclosure-usb3-ssd](/setups/pi4-fan-enclosure-usb3-ssd.jpg)
 
 ![Normal](/benchmark/stressberry/normal.png)
 
