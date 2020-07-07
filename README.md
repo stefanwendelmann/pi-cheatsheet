@@ -138,3 +138,23 @@ https://jamesachambers.com/raspberry-pi-storage-benchmarks-2019-benchmarking-scr
 ```bash
 sudo curl https://raw.githubusercontent.com/TheRemote/PiBenchmarks/master/Storage.sh | sudo bash
 ```
+
+## Stress Test
+
+* [Stressberry](https://github.com/nschloe/stressberry)
+
+Install for Pi OS Light Image:
+
+```bash
+sudo apt install stress
+sudo apt-get install libatlas-base-dev
+sudo pip3 install stressberry
+stressberry-run out.dat
+stressberry-plot out.dat -o out.png
+```
+
+## Overclock CPU & GPU
+
+Pi 4 - 4GB Model
+
+
